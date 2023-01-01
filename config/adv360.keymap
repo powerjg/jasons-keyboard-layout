@@ -28,13 +28,13 @@
           bindings = <&kp>, <&kp>;
       };
 
-      myht: my_hold_tap {
-          compatible = "zmk,behavior-hold-tap";
-          label = "MY_HOLD_TAP";
-          #binding-cells = <2>;
-          bindings = <&kp>, <&kp>;
-          hold-trigger-key-positions = <0 21>; // Bottom left corner and bottom right corner
-      };
+      // myht: my_hold_tap {
+      //     compatible = "zmk,behavior-hold-tap";
+      //     label = "MY_HOLD_TAP";
+      //     #binding-cells = <2>;
+      //     bindings = <&kp>, <&kp>;
+      //     hold-trigger-key-positions = <0 21>; // Bottom left corner and bottom right corner
+      // };
   };
 
   keymap {
