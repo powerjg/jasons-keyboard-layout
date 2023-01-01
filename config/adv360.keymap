@@ -28,13 +28,16 @@
           bindings = <&kp>, <&kp>;
       };
 
-      // myht: my_hold_tap {
-      //     compatible = "zmk,behavior-hold-tap";
-      //     label = "MY_HOLD_TAP";
-      //     #binding-cells = <2>;
-      //     bindings = <&kp>, <&kp>;
-      //     hold-trigger-key-positions = <0 21>; // Bottom left corner and bottom right corner
-      // };
+      myht: my_hold_tap {
+          compatible = "zmk,behavior-hold-tap";
+          label = "MY_HOLD_TAP";
+          #binding-cells = <2>;
+          bindings = <&kp>, <&kp>;
+          flavor = "tap-preferred";
+          tapping-term-ms = <200>;
+          quick-tap-ms = <125>;
+          hold-trigger-key-positions = <0 21>; // Bottom left corner and bottom right corner
+      };
   };
 
   keymap {
@@ -42,11 +45,11 @@
 
     default_layer { /* layer 0 */
       bindings = <
-        &kp LGUI(TAB)  &kp N1        &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                                       &tog 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0          &kp MINUS
+        &kp LG(TAB)    &kp N1        &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                                       &tog 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0          &kp MINUS
         &kp TAB        &kp Q         &kp W    &kp E    &kp R      &kp T  &tog 2                                                                       &tog 4 &kp Y  &kp U  &kp I     &kp O    &kp P           &kp EQUAL
         &kp ESC        &kp A         &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT             &kp RCTRL  &kp LGUI           &none  &kp H  &kp J  &kp K     &kp L    &kp SEMI        &kp SQT
-        &kp LSHFT      &mt LCTRL Z   &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp M  &kp COMMA &kp DOT  &mt RCTRL FSLH  &kp RSHFT
-        &kp LC(LS(P))  &kp GRAVE     &kp BSLH &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE               &kp UP &kp DOWN  &kp LBKT &kp RBKT        &kp RC(RALT)
+        &kp LSHFT      &mt LCTRL Z   &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP  &none     &none           &kp N  &kp M  &kp COMMA &kp DOT  &mt RCTRL FSLH  &kp RSHFT
+        &kp LC(LS(P))  &kp GRAVE     &kp BSLH &myht LEFT END &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN  &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT        &kp RC(RALT)
       >;
     };
     media { /* layer 1 */
