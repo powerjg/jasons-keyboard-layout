@@ -40,6 +40,22 @@
       };
   };
 
+  combos {
+    compatible = "zmk,combos";
+
+    end_combo {
+        bindings = <&kp END>;
+        key-positions = <70 66>;
+        timeout-ms = <1000>;
+    };
+
+    home_combo {
+        bindings = <&kp HOME>;
+        key-positions = <70 67>;
+        timeout-ms = <1000>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -49,7 +65,7 @@
         &kp TAB        &kp Q         &kp W    &kp E    &kp R      &kp T  &tog 2                                                                       &tog 4 &kp Y  &kp U  &kp I     &kp O    &kp P           &kp EQUAL
         &kp ESC        &kp A         &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT             &kp RCTRL  &kp LGUI           &none  &kp H  &kp J  &kp K     &kp L    &kp SEMI        &kp SQT
         &kp LSHFT      &mt LCTRL Z   &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP  &none     &none           &kp N  &kp M  &kp COMMA &kp DOT  &mt RCTRL FSLH  &kp RSHFT
-        &kp LC(LS(P))  &kp GRAVE     &kp BSLH &myht LEFT END &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN  &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT        &kp RC(RALT)
+        &kp LC(LS(P))  &kp GRAVE     &kp BSLH &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN  &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT        &kp RC(RALT)
       >;
     };
     media { /* layer 1 */
