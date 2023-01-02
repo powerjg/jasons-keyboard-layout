@@ -49,7 +49,7 @@
         &kp TAB          &kp Q         &kp W    &kp E    &kp R      &kp T  &tog 2                                                                       &tog 4 &kp Y  &kp U  &kp I     &kp O    &kp P           &kp EQUAL
         &kp ESC          &kp A         &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT             &kp RCTRL  &kp LGUI           &none  &kp H  &kp J  &kp K     &kp L    &kp SEMI        &kp SQT
         &kp LSHFT        &mt LCTRL Z   &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP  &none     &none           &kp N  &kp M  &kp COMMA &kp DOT  &mt RCTRL FSLH  &kp RSHFT
-        &lt 5 LC(LS(P))  &kp GRAVE     &kp BSLH &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN  &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT        &lt 5 RC(RALT)
+        &lt 5 LC(LS(P))  &kp GRAVE     &kp BSLH &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN  &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT        &kp RC(RALT)
       >;
     };
     media { /* layer 1 */
@@ -73,7 +73,7 @@
     bluetooth { /* layer 3 */
       bindings = <
         &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans                                                                                                         &trans                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-        &none &none        &none        &none        &none        &none        &trans                                                                                                         &trans            &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none        &trans                                                                                                         &trans                 &none        &none        &none        &none        &none        &none
         &none &none        &none        &none        &none        &none        &rgb_ug RGB_MEFS_CMD 5                 &bt BT_CLR &bt BT_CLR             &bt BT_CLR &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
         &none &none        &none        &none        &none        &none                               &none           &none      &none      &none &none &none      &none      &none                                  &none        &none        &none        &none        &none        &none
         &none &none        &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
